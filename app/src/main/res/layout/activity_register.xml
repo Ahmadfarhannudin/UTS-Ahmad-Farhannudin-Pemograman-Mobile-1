@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    android:fitsSystemWindows="true">
+
+    <!-- Blob dekorasi -->
+    <View
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="-60dp"
+        android:layout_marginEnd="-60dp"
+        android:background="@drawable/blob_gradient_2"
+        android:alpha="0.45"/>
+
+    <View
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginBottom="-40dp"
+        android:layout_marginStart="-40dp"
+        android:background="@drawable/blob_gradient_1"
+        android:alpha="0.4"/>
+
+    <View
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/blob_gradient_3"
+        android:alpha="0.25"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <Space android:layout_width="match_parent" android:layout_height="48dp"/>
+
+            <!-- Brand Section -->
+            <LinearLayout
+                android:id="@+id/regBrandSection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:alpha="0">
+
+                <!-- Tombol Back -->
+                <ImageButton
+                    android:id="@+id/btnBackReg"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/ic_arrow_back"
+                    app:tint="@color/text_primary"
+                    android:padding="8dp"
+                    android:layout_marginBottom="16dp"/>
+
+                <FrameLayout
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_gravity="center">
+                    <View
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:background="@drawable/logo_bg_glow"/>
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_logo_bolt"
+                        app:tint="@color/accent_primary"/>
+                </FrameLayout>
+
+                <Space android:layout_width="0dp" android:layout_height="14dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Buat Akun Baru"
+                    android:textColor="@color/text_primary"
+                    android:textSize="26sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daftarkan dirimu sekarang!"
+                    android:textColor="@color/text_muted"
+                    android:textSize="14sp"
+                    android:layout_marginTop="6dp"/>
+            </LinearLayout>
+
+            <Space android:layout_width="0dp" android:layout_height="32dp"/>
+
+            <!-- Card Registrasi -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/registerCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/glass_bg"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="0dp"
+                android:alpha="0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="28dp">
+
+                    <!-- ── Nama Lengkap ── -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Lengkap"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.08"/>
+
+                    <Space android:layout_width="0dp" android:layout_height="8dp"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/input_bg"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_person"
+                                app:tint="@color/icon_color"/>
+                            <EditText
+                                android:id="@+id/etFullName"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:background="@null"
+                                android:hint="Nama lengkapmu"
+                                android:inputType="textPersonName"
+                                android:textColor="@color/text_primary"
+                                android:textColorHint="@color/text_hint"
+                                android:textSize="15sp"
+                                android:singleLine="true"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <Space android:layout_width="0dp" android:layout_height="20dp"/>
+
+                    <!-- ── Email ── -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email Address"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.08"/>
+
+                    <Space android:layout_width="0dp" android:layout_height="8dp"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/input_bg"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="16dp">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_email"
+                                app:tint="@color/icon_color"/>
+                            <EditText
+                                android:id="@+id/etRegEmail"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:background="@null"
+                                android:hint="you@example.com"
+                                android:inputType="textEmailAddress"
+                                android:textColor="@color/text_primary"
+                                android:textColorHint="@color/text_hint"
+                                android:textSize="15sp"
+                                android:singleLine="true"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <Space android:layout_width="0dp" android:layout_height="20dp"/>
+
+                    <!-- ── Password ── -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Password"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.08"/>
+
+                    <Space android:layout_width="0dp" android:layout_height="8dp"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/input_bg"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="4dp">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_lock"
+                                app:tint="@color/icon_color"/>
+                            <EditText
+                                android:id="@+id/etRegPassword"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:background="@null"
+                                android:hint="Min. 6 karakter"
+                                android:inputType="textPassword"
+                                android:textColor="@color/text_primary"
+                                android:textColorHint="@color/text_hint"
+                                android:textSize="15sp"
+                                android:singleLine="true"/>
+                            <ImageButton
+                                android:id="@+id/btnToggleRegPassword"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:src="@drawable/ic_eye_off"
+                                app:tint="@color/icon_color"
+                                android:padding="12dp"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <Space android:layout_width="0dp" android:layout_height="20dp"/>
+
+                    <!-- ── Konfirmasi Password ── -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Konfirmasi Password"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="12sp"
+                        android:letterSpacing="0.08"/>
+
+                    <Space android:layout_width="0dp" android:layout_height="8dp"/>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/input_bg"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:paddingStart="16dp"
+                            android:paddingEnd="4dp">
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:src="@drawable/ic_lock"
+                                app:tint="@color/icon_color"/>
+                            <EditText
+                                android:id="@+id/etConfirmPassword"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_marginStart="12dp"
+                                android:background="@null"
+                                android:hint="Ulangi password"
+                                android:inputType="textPassword"
+                                android:textColor="@color/text_primary"
+                                android:textColorHint="@color/text_hint"
+                                android:textSize="15sp"
+                                android:singleLine="true"/>
+                            <ImageButton
+                                android:id="@+id/btnToggleConfirm"
+                                android:layout_width="44dp"
+                                android:layout_height="44dp"
+                                android:background="?attr/selectableItemBackgroundBorderless"
+                                android:src="@drawable/ic_eye_off"
+                                app:tint="@color/icon_color"
+                                android:padding="12dp"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <Space android:layout_width="0dp" android:layout_height="28dp"/>
+
+                    <!-- Tombol Register -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnRegister"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:text="Daftar Sekarang"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_on_accent"
+                        app:backgroundTint="@color/accent_primary"
+                        app:cornerRadius="16dp"
+                        app:elevation="0dp"
+                        style="@style/Widget.MaterialComponents.Button"/>
+
+                    <!-- Divider -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp">
+                        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="@color/divider_color"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="  atau  " android:textColor="@color/text_muted" android:textSize="12sp"/>
+                        <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="@color/divider_color"/>
+                    </LinearLayout>
+
+                    <!-- Social Register -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:weightSum="2">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRegGoogle"
+                            android:layout_width="0dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="Google"
+                            android:textSize="14sp"
+                            android:textColor="#1F1F1F"
+                            app:backgroundTint="#FFFFFF"
+                            app:cornerRadius="14dp"
+                            app:elevation="0dp"
+                            app:icon="@drawable/ic_google"
+                            app:iconGravity="textStart"
+                            app:iconPadding="8dp"
+                            app:iconSize="20dp"
+                            app:iconTint="@null"
+                            style="@style/Widget.MaterialComponents.Button"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnRegApple"
+                            android:layout_width="0dp"
+                            android:layout_height="52dp"
+                            android:layout_weight="1"
+                            android:layout_marginStart="8dp"
+                            android:text="Apple"
+                            android:textSize="14sp"
+                            android:textColor="#FFFFFF"
+                            app:backgroundTint="#000000"
+                            app:cornerRadius="14dp"
+                            app:elevation="0dp"
+                            app:icon="@drawable/ic_apple"
+                            app:iconGravity="textStart"
+                            app:iconPadding="8dp"
+                            app:iconSize="20dp"
+                            app:iconTint="@null"
+                            style="@style/Widget.MaterialComponents.Button"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space android:layout_width="0dp" android:layout_height="28dp"/>
+
+            <!-- Sudah punya akun? Login -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sudah punya akun? "
+                    android:textColor="@color/text_muted"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/tvBackToLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:textColor="@color/accent_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="4dp"/>
+            </LinearLayout>
+
+            <Space android:layout_width="match_parent" android:layout_height="32dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

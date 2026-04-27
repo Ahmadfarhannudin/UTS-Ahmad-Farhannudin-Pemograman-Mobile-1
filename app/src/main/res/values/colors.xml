@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#0D0D14</color>
+    <color name="glass_bg">#1A1A2E</color>
+    <color name="accent_primary">#7C6FFF</color>
+    <color name="accent_secondary">#FF6B9D</color>
+    <color name="accent_tertiary">#00D4FF</color>
+    <color name="accent_glow">#4D3DFF</color>
+    <color name="text_primary">#F0F0FF</color>
+    <color name="text_secondary">#A0A0C0</color>
+    <color name="text_muted">#606080</color>
+    <color name="text_hint">#404060</color>
+    <color name="text_on_accent">#FFFFFF</color>
+    <color name="input_bg">#12121F</color>
+    <color name="icon_color">#6060A0</color>
+    <color name="divider_color">#1E1E3A</color>
+    <color name="social_btn_bg">#14142B</color>
+    <color name="ripple_color">#55FFFFFF</color>
+</resources>
